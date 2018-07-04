@@ -1,0 +1,39 @@
+name: wrk-yaml-conf
+version: '1.0'
+synopsis: Config file example using Data.Yaml
+description: A small example project to illustrate how to quickly and easily
+  use the yaml library to de/serialize config file data.
+license: ISC
+author: Dino Morelli
+maintainer: dino@ui3.info
+copyright: 2018 Dino Morelli
+category: Sample Code
+extra-source-files:
+- badConfig.yaml
+- goodConfig.yaml
+- package.yaml
+- README.md
+- stack.yaml
+
+github: dino-/wrk-yaml-conf
+
+ghc-options:
+- -fwarn-tabs
+- -Wall
+- -Wcompat
+- -Wincomplete-record-updates
+- -Wincomplete-uni-patterns
+- -Wredundant-constraints
+
+default-extensions:
+- OverloadedStrings
+
+executables:
+  wrk-yaml-conf:
+    source-dirs: src
+    main: Main.hs
+    dependencies:
+    - base
+    - directory
+    - text
+    - yaml
